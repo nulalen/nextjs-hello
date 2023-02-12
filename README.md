@@ -7,3 +7,10 @@ Next.jsお勉強用リポジトリ
 ```
 docker compose run --rm app sh -c 'yarn create next-app . --typescript --network-timeout 600000'
 ```
+yarnコマンドのESOCKETTIMEDOUTエラーによって失敗するため、タイムアウトまでの時間を延長する```--network-timeout```オプションを使用した
+
+## Prettierのインストール
+ESLintはNextjs v11.0.0以降create-next-appの際にインストールされるため、Prettierのみインストールする
+```
+docker compose run --rm app sh -c "yarn add -D prettier eslint-config-prettier --network-timeout 600000"
+```
